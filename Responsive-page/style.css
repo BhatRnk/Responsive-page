@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    margin: 0%;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: 300;
+    letter-spacing: 4px;
+    
+}
+
+#grid-container{
+    display: grid; /*nothing will happen this property tells browser that div and its children will follow grid layout rules and giving display grid changes nothing by default we need to define grid property to have seen result*/
+    /*we need to define how many columns each row should have for that we have property called GRID-TEMPELATE-COLUMS*/
+   grid-template-columns: auto auto auto auto;
+     /*to have row-gap and column-gap use property grid-gap*/
+     grid-gap: 16px;   
+     /*row-gap: 32px;  
+     column-gap: 42px;*/
+
+     /*justify-content: start; /*we can use values start, end, space between, center*/
+     /* grid-template-columns: 150px 150px 150px 150px;*/
+}   
+
+.movie-poster{
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.movie-poster:hover{
+    animation:zoom 3s forwards;
+}
+
+
+/*for tablet screen to show 3 columns like for i-pad*/
+@media screen and (max-width:900px) {
+    #grid-container{
+        grid-template-columns: auto auto auto;
+    }
+    
+}
+
+/*for mobile phone screen*/
+@media (max-width:400px){
+    #grid-container{
+        grid-template-columns:auto auto;
+
+}}
